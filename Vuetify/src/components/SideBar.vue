@@ -1,3 +1,13 @@
+<script setup>
+
+  const emits = defineEmits(["selectOption"])
+
+  const selectOption = (isColor) => {
+    emits("selectOption", isColor)
+  }
+
+</script>
+
 <template>
   <VNavigationDrawer expand-on-hover rail>
     <v-list>
@@ -10,11 +20,13 @@
         prepend-icon="mdi-image"
         title="Color Gallery"
         value="color"
+        @click="selectOption(true)"
       />
       <v-list-item 
         prepend-icon="mdi-dialpad"
         title="GreySpace Gallery"
         value="color"
+        @click="selectOption(false)"
       />
     </v-list>
   </VNavigationDrawer>
