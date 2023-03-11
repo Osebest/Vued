@@ -1,5 +1,7 @@
 # essentials
 
+## Live link: https://ose-github-api.netlify.app/
+
 ## Project setup
 
 ```
