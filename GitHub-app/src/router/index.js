@@ -40,9 +40,13 @@ const routes = [
         component: () => import('@/views/Login.vue'),
       },
       {
-        path: '/:pathMatch(.*)*',
-        name: '404',
+        path: '/404',
+        name: 'page-not-found',
         component: () => import('@/views/404.vue'),
+      },
+      {
+        path: '/:pathMatch(.*)*',
+        redirect: "/404",
       }
     ],
   },
